@@ -48,3 +48,13 @@ h1 {
     border-radius: 12px;
     padding: 16px;
 }
+
+.dashboard, .dashboard table {
+    width: 100%;
+}
+
+.dashboard tr {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
