@@ -59,9 +59,14 @@ h1 {
     justify-content: space-between;
 }
 
+.dashboard tr:hover {
+    background-color: pink;
+}
+
 .dashboard-header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
 }

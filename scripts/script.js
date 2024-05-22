@@ -7,6 +7,8 @@ inputField.addEventListener("change", () => getValue());
 
 document.querySelector(".inputCurrency").addEventListener("input", () => handleConversion());
 
+var displayedCurrencies = ["CAD", "USD", "GBP"];
+
 function getValue () {
     return inputField.value;
 }
@@ -27,7 +29,7 @@ function handleConversion() {
                 value.remove();
             })
         }
-        for (const [key, value] of Object.entries(data.rates)) {
+        for (const [key, value] of Object.entries(data.rates).filter(([key, value]) => displayedCurrencies.includes(key))) {
             let row = document.createElement("tr");
             let keyCell = document.createElement("td");
             let valueCell = document.createElement("td");
@@ -37,9 +39,22 @@ function handleConversion() {
 
             row.appendChild(keyCell);
             row.appendChild(valueCell);
+
+            row.addEventListener("click", function() {
+                displayedCurrencies.splice(displayedCurrencies.indexOf(key), 1);
+                handleConversion();
+            })
             document.querySelector(".dashboard table").appendChild(row);
         }
     });
 }
 
 const addButton = document.querySelector("#add");
+const currencyOptions = document.querySelector("#currency-options");
+addButton.addEventListener("click", function() {
+    if (!displayedCurrencies.includes(currencyOptions.value)) {
+        displayedCurrencies.push(currencyOptions.value);
+    }
+    handleConversion();
+    console.log(displayedCurrencies);
+})
