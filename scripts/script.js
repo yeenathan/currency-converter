@@ -5,7 +5,7 @@ currencyDropdown.addEventListener("change", () => getBaseCurrency());
 
 inputField.addEventListener("change", () => getValue());
 
-document.addEventListener("change", () => handleConversion());
+document.querySelector(".inputCurrency").addEventListener("input", () => handleConversion());
 
 function getValue () {
     return inputField.value;
@@ -22,7 +22,24 @@ function handleConversion() {
     fetch(`https://${host}/latest?amount=${value}&from=${baseCurrency}`)
     .then(resp => resp.json())
     .then((data) => {
-        document.querySelector("#USD + td").innerHTML = data.rates.USD ? data.rates.USD : "-";
-        document.querySelector("#GBP + td").innerHTML = data.rates.GBP ? data.rates.GBP : "-";
+        if (document.querySelector(".dashboard tr")) {
+            document.querySelectorAll(".dashboard tr").forEach(function(value) {
+                value.remove();
+            })
+        }
+        for (const [key, value] of Object.entries(data.rates)) {
+            let row = document.createElement("tr");
+            let keyCell = document.createElement("td");
+            let valueCell = document.createElement("td");
+
+            keyCell.appendChild(document.createTextNode(key));
+            valueCell.appendChild(document.createTextNode(value));
+
+            row.appendChild(keyCell);
+            row.appendChild(valueCell);
+            document.querySelector(".dashboard table").appendChild(row);
+        }
     });
 }
+
+const addButton = document.querySelector("#add");
