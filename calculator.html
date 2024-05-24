@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/calculator.css">
+    <title>Currency Exchange</title>
+</head>
+    <body class="home">
+        <div class="frame">
+            <div class="top-bar">
+                <img src="./images/iphone-top-bar.svg" alt="top-bar">
+            </div>
+
+            <!-- calculator -->
+            <h1>Calculator</h1>
+            <div class="calculator_container">
+                <div class="calculator_inner_container mx-auto">
+        
+                    <!-- display history  -->
+                    <div id="history-display" class="d-none"></div>
+        
+                    <!-- calculator number display -->
+                    <div class="calculator__display mb-3 p-2" id="display">0</div>
+        
+                    <!-- calculator keys -->
+                    <div class="calculator__keys row">
+                        <div class="col">
+                            <div class="row mb-1">
+                                <button class="col btn key--operator" data-action="add">+</button>
+                                <button class="col btn key--operator" data-action="subtract">-</button>
+                                <button class="col btn key--operator" data-action="multiply">x</button>
+                                <button class="col btn key--operator" data-action="divide">÷</button>
+                            </div>
+                            <div class="row mb-1">
+                                <button class="col key--number btn">7</button>
+                                <button class="col key--number btn">8</button>
+                                <button class="col key--number btn">9</button>
+                            </div>
+                            <div class="row mb-1">
+                                <button class="col key--number btn">4</button>
+                                <button class="col key--number btn">5</button>
+                                <button class="col key--number btn">6</button>
+                            </div>
+                            <div class="row mb-1">
+                                <button class="col key--number btn">1</button>
+                                <button class="col key--number btn">2</button>
+                                <button class="col key--number btn">3</button>
+                            </div>
+                            <div class="row mb-1">
+                                <button class="col key--number btn">0</button>
+                                <button class="col key--number btn" data-action="decimal">.</button>
+                                <button class="col key--delete btn" data-action="delete">Del</button>
+                                <button class="col key--delete btn" data-action="clear">Clear</button>
+                            </div>
+                            <div class="row bottom-row">
+                                    <button class="col-3 btn key--history" data-action="showHistory"><img src="/images/history.svg"/></button>
+                                    <button class="col btn key--equal" data-action="calculate">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- currency converter -->
+
+            <div class="converter">
+                <form class="inputCurrency">
+                    <select>
+                        <option>CAD</option>
+                        <option>USD</option>
+                        <option>AUD</option>
+                        <option>BGN</option>
+                        <option>BRL</option>
+                        <option>CHF</option>
+                        <option>CNY</option>
+                        <option>CZK</option>
+                        <option>DKK</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                        <option>HKD</option>
+                        <option>HUF</option>
+                        <option>IDR</option>
+                        <option>ILS</option>
+                        <option>INR</option>
+                        <option>ISK</option>
+                        <option>JPY</option>
+                        <option>KRW</option>
+                        <option>MXN</option>
+                        <option>MYR</option>
+                        <option>NOK</option>
+                        <option>NZD</option>
+                        <option>PHP</option>
+                        <option>PLN</option>
+                        <option>RON</option>
+                        <option>SEK</option>
+                        <option>SGD</option>
+                        <option>THB</option>
+                        <option>TRY</option>
+                        <option>USD</option>
+                        <option>ZAR</option>
+                    </select>
+                    <input type="text" placeholder="Enter currency amount" id="currency-amount"/>
+                    <select id="currency-options">
+                        <option>CAD</option>
+                        <option>USD</option>
+                        <option>AUD</option>
+                        <option>BGN</option>
+                        <option>BRL</option>
+                        <option>CHF</option>
+                        <option>CNY</option>
+                        <option>CZK</option>
+                        <option>DKK</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                        <option>HKD</option>
+                        <option>HUF</option>
+                        <option>IDR</option>
+                        <option>ILS</option>
+                        <option>INR</option>
+                        <option>ISK</option>
+                        <option>JPY</option>
+                        <option>KRW</option>
+                        <option>MXN</option>
+                        <option>MYR</option>
+                        <option>NOK</option>
+                        <option>NZD</option>
+                        <option>PHP</option>
+                        <option>PLN</option>
+                        <option>RON</option>
+                        <option>SEK</option>
+                        <option>SGD</option>
+                        <option>THB</option>
+                        <option>TRY</option>
+                        <option>USD</option>
+                        <option>ZAR</option>
+                    </select>
+                    <button id="add" type="button">Convert</button>
+                </form>
+                <div class="dashboard">
+                    <table class="currency-table">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="scripts/calculator.js"></script>
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
