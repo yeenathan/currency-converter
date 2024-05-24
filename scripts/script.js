@@ -70,3 +70,4 @@ addButton.addEventListener("click", function() {
     handleConversion();
     console.log(displayedCurrencies);
 })
+

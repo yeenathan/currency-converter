@@ -105,8 +105,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // toggle history button
+        function updateHistoryDisplay() {
+            historyDisplay.textContent = "History: " + calculationHistory;
+        }
+
         historyButton.addEventListener('click', function() {
-            historyDisplay.classList.toggle('d-none')
+            historyDisplay.classList.toggle('d-none');
+            if (!historyDisplay.classList.contains('d-none')) {
+                updateHistoryDisplay(); // Update history display text when shown
+            }
         });
+
     } 
 });
