@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Historical Value Checker</title>
+  <link rel="stylesheet" type="text/css" href="css/stylesHistorical.css">
+</head>
+<body>
+    <div class="frame">
+        <h1>Currency Historical Value Checker</h1>
+        <div class="cardBackground">
+        <label for="startCurrency" id="titlesTop">Compare:</label>
+        <select id="startCurrency">
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="USD">US Dollar (USD)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="BGN">Bulgarian Lev (BGN)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="CZK">Czech Koruna (CZK)</option>
+            <option value="DKK">Danish Krone (DKK)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">British Pound Sterling (GBP)</option>
+            <option value="HKD">Hong Kong Dollar (HKD)</option>
+            <option value="HUF">Hungarian Forint (HUF)</option>
+            <option value="IDR">Indonesian Rupiah (IDR)</option>
+            <option value="ILS">Israeli New Shekel (ILS)</option>
+            <option value="INR">Indian Rupee (INR)</option>
+            <option value="ISK">Icelandic Króna (ISK)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="KRW">South Korean Won (KRW)</option>
+            <option value="MXN">Mexican Peso (MXN)</option>
+            <option value="MYR">Malaysian Ringgit (MYR)</option>
+            <option value="NOK">Norwegian Krone (NOK)</option>
+            <option value="NZD">New Zealand Dollar (NZD)</option>
+            <option value="PHP">Philippine Peso (PHP)</option>
+            <option value="PLN">Polish Złoty (PLN)</option>
+            <option value="RON">Romanian Leu (RON)</option>
+            <option value="SEK">Swedish Krona (SEK)</option>
+            <option value="SGD">Singapore Dollar (SGD)</option>
+            <option value="THB">Thai Baht (THB)</option>
+            <option value="TRY">Turkish Lira (TRY)</option>
+            <option value="USD">US Dollar (USD)</option>
+            <option value="ZAR">South African Rand (ZAR)</option>
+        </select>
+
+        <label for="endCurrency" id="titles">To:</label>
+        <select id="endCurrency">
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="USD">US Dollar (USD)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="BGN">Bulgarian Lev (BGN)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="CZK">Czech Koruna (CZK)</option>
+            <option value="DKK">Danish Krone (DKK)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">British Pound Sterling (GBP)</option>
+            <option value="HKD">Hong Kong Dollar (HKD)</option>
+            <option value="HUF">Hungarian Forint (HUF)</option>
+            <option value="IDR">Indonesian Rupiah (IDR)</option>
+            <option value="ILS">Israeli New Shekel (ILS)</option>
+            <option value="INR">Indian Rupee (INR)</option>
+            <option value="ISK">Icelandic Króna (ISK)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="KRW">South Korean Won (KRW)</option>
+            <option value="MXN">Mexican Peso (MXN)</option>
+            <option value="MYR">Malaysian Ringgit (MYR)</option>
+            <option value="NOK">Norwegian Krone (NOK)</option>
+            <option value="NZD">New Zealand Dollar (NZD)</option>
+            <option value="PHP">Philippine Peso (PHP)</option>
+            <option value="PLN">Polish Złoty (PLN)</option>
+            <option value="RON">Romanian Leu (RON)</option>
+            <option value="SEK">Swedish Krona (SEK)</option>
+            <option value="SGD">Singapore Dollar (SGD)</option>
+            <option value="THB">Thai Baht (THB)</option>
+            <option value="TRY">Turkish Lira (TRY)</option>
+            <option value="USD">US Dollar (USD)</option>
+            <option value="ZAR">South African Rand (ZAR)</option>
+        </select>
+    
+        <label for="date" id="titles">Select Date:</label>
+        <input type="date" id="date">
+        <button id="checkButton">Check Value</button>
+    </div>
+        <div id="result"></div>
+    </div>
+    <script src="scripts/scriptHistorical.js"></script>
+</body>
+</html>
