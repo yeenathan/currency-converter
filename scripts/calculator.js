@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const keys = document.querySelector('.calculator__keys');
     const display = document.getElementById('display');
-    const calculator = document.querySelector('.calculator_container');
     const historyDisplay = document.getElementById('history-display');
+    const historyButton = document.querySelector('.key--history');
+
     let firstValue = '';
     let operator = '';
     let waitingForSecondValue = false; 
@@ -98,5 +99,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             return result.toString();
         }
+
+        // toggle history button
+        historyButton.addEventListener('click', function() {
+            historyDisplay.classList.toggle('d-none')
+        });
     } 
 });
