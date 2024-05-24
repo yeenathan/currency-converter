@@ -6,9 +6,14 @@
   <title>Currency Historical Value Checker</title>
   <link rel="stylesheet" type="text/css" href="css/stylesHistorical.css">
 </head>
-<body>
+<body class="home">
     <div class="frame">
-        <h1>Currency Historical Value Checker</h1>
+        <div class="top-bar">
+            <img src="./images/iphone-top-bar.svg" alt="top-bar">
+        </div>
+        <header>
+            <h1>Historical Value Checker</h1>
+        </header>
         <div class="cardBackground">
         <label for="startCurrency" id="titlesTop">Compare:</label>
         <select id="startCurrency">
@@ -89,5 +94,29 @@
         <div id="result"></div>
     </div>
     <script src="scripts/scriptHistorical.js"></script>
+    <script>
+        let startX;
+        let threshold = 200;
+    
+        function mouseDown(event) {
+            startX = event.clientX;
+        }
+    
+        function mouseUp(event) {
+            let endX = event.clientX;
+            let deltaX = endX - startX;
+    
+            if (Math.abs(deltaX) > threshold) {
+                if (deltaX > 0) {
+                    window.location.href = 'Historical.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+        }
+    
+        document.addEventListener('mousedown', mouseDown, false);
+        document.addEventListener('mouseup', mouseUp, false);
+    </script>
 </body>
 </html>
