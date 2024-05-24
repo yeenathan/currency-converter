@@ -29,7 +29,7 @@ h1 {
     background-color: lightgray;
     width: 20em;
     border-radius: 2em;
-    padding-top: 5em;
+    padding-top: 4em;
 }
 
 .calculator_inner_container {
@@ -51,7 +51,7 @@ h1 {
 .calculator__keys button {
     margin: 0.25rem;
     padding: 0.5rem 1rem; 
-    border-radius: 20em;
+    /* border-radius: 20em; */
 }
 
 .key--operator {
@@ -65,13 +65,13 @@ h1 {
 }
 
 .key--number {
-    background-color: #967EF5;
+    background-color: #937AF5;
     color: white;
 }
 
 .key--history, 
 .key--equal {
-    background-color: #59836B;
+    background-color: #D9AB56;
     color: white;
 }
 
@@ -81,7 +81,7 @@ h1 {
 }
 
 .key--delete {
-    background-color: #805983;
+    background-color: #d5405e;
     color: white;
 }
 
@@ -92,3 +92,24 @@ h1 {
 }
 
 /* converter */
+
+.dashboard {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 24px;
+}
+
+.dashboard, .dashboard table {
+    width: 100%;
+}
+
+.dashboard tr {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: solid 1px #DBE2EE;
+    padding: 1em;
+}
+
+
