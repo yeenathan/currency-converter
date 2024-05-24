@@ -160,3 +160,21 @@ table td {
     font-weight: 500;
     font-size: 18px;
 }
+
+.nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav a:visited {
+    color: white;
+}
