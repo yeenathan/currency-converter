@@ -10,10 +10,18 @@ function mouseUp(event) {
     let deltaX = endX - startX;
 
     if (Math.abs(deltaX) > threshold) {
-        if (deltaX > 0) {
-            window.location.href = 'Historical.html';
-        } else {
-            window.location.href = 'index.html';
+        switch (window.location.pathname) {
+            case '/index.html':
+                window.location.href = deltaX > 0 ? 'Historical.html' : 'Calculator.html';
+                break;
+            case '/Historical.html':
+                window.location.href = deltaX > 0 ? 'Calculator.html' : 'index.html';
+                break;
+            case '/Calculator.html':
+                window.location.href = deltaX > 0 ? 'index.html' : 'Historical.html';
+                break;
+            default:
+                break;
         }
     }
 }
