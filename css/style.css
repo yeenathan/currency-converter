@@ -8,19 +8,24 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 h1 {
-    margin-top: 108px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-family:'work sans', sans-serif;
+    font-weight: 600;
+    color: white;
 }
 
 .frame {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 398px;
-    height: 932px;
-    background-color: white;
+    width: 430px;
+    min-height: 932px;
+    background: linear-gradient(60deg, #2F5445 30%, #5C8359 100%);
     margin: auto;
     gap: 32px;
-    padding: 32px;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
 .content {
@@ -40,14 +45,18 @@ h1 {
 
 .inputCurrency select {
     width: fit-content;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-family: 'work sans', sans-serif;
+    font-weight: 500;
+    color: #CED0CE;
 }
 
-.inputCurrency input {
-    border: none;
-    background-color: #00000060;
-    border-radius: 12px;
-    padding: 16px;
+.inputCurrency select:focus {
+    outline: none;
 }
+
 
 .dashboard, .dashboard table {
     width: 100%;
@@ -57,10 +66,18 @@ h1 {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    border-top: solid 1px #DBE2EE;
+    padding: 1em;
 }
 
+.dashboard table {
+    border-spacing: 0em;
+
+}
+
+
 .dashboard tr:hover {
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .dashboard-header {
@@ -68,5 +85,79 @@ h1 {
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    padding: 25px 1em 20px 1em;
+    border-bottom: solid 1px #DBE2EE;
+    margin-bottom: -1px;
 }
+
+.dashboard-header h2{
+    font-size: 20px;
+    font-family: 'work sans', sans-serif;
+    font-weight: 500;
+    color: #000000;
+
+}
+
+.dashboard {
+    background-color: #ffffff;
+    border-radius: 24px;
+    min-height: 612px;
+}
+
+.inputCurrency input {
+    border: none;
+    background-color: rgba(35, 49, 37, 0.6);
+    border-radius: 12px;
+    padding-left: 16px;
+    height: 60px;
+    color: white;
+    font-size: 18px;
+    font-family: 'work sans', sans-serif;
+    font-weight: 600;
+}
+
+.inputCurrency input::placeholder {
+    color: #B2B6B3; 
+    font-size: 14px;
+    font-family: 'work sans', sans-serif;
+    font-weight: 400;
+}
+
+.inputCurrency input:focus {
+    outline: none;
+}
+
+.dashboard select {
+    width: fit-content;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-family: 'work sans', sans-serif;
+    font-weight: 500;
+    color: #CED0CE;
+
+}
+.dashboard select:focus {
+    outline: none;
+}
+
+.dashboard button {
+    background-color: transparent;
+    border: none;
+    color: none;
+}
+
+.addCurrency {
+    display: flex;
+    flex-flow: row;
+    column-gap: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table td {
+    font-family: 'work sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
