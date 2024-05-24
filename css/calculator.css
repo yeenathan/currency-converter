@@ -49,13 +49,14 @@ h1 {
 }
 
 .calculator__keys button {
-    margin: 0.25rem;
-    padding: 0.5rem 1rem; 
+    margin: 1px;
+    width: 4em;
+    height: 4em;
     /* border-radius: 20em; */
 }
 
 .key--operator {
-    background-color: #6391FF;
+    background-color: #805983;
     color: white;
 }
 
@@ -65,13 +66,13 @@ h1 {
 }
 
 .key--number {
-    background-color: #937AF5;
+    background-color: #6391FF;
     color: white;
 }
 
 .key--history, 
 .key--equal {
-    background-color: #D9AB56;
+    background-color: #6FCF97;
     color: white;
 }
 
@@ -81,7 +82,7 @@ h1 {
 }
 
 .key--delete {
-    background-color: #d5405e;
+    background-color: #FF5A5A;
     color: white;
 }
 
