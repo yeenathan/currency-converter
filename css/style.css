@@ -137,6 +137,9 @@ h1 {
     color: #CED0CE;
 
 }
+.dashboard select:focus {
+    outline: none;
+}
 
 .dashboard button {
     background-color: transparent;
