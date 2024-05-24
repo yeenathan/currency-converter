@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const display = document.getElementById('display');
     const historyDisplay = document.getElementById('history-display');
     const historyButton = document.querySelector('.key--history');
+    const currencyInput = document.getElementById('currency-amount');
 
     let firstValue = '';
     let operator = '';
@@ -81,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         firstValue = display.textContent; // store result as first value
                         operator = ''; // reset the operator for next calculation
                         waitingForSecondValue = true; // waits for second value 
+
+                        currencyInput.value = display.textContent;
+                        handleConversion();
                     }
                 }
             }
