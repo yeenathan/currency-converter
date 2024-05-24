@@ -15,7 +15,7 @@ function getValue () {
 }
 
 function getBaseCurrency () {
-    return currencyDropdown.value;
+    return currencyDropdown.value.substring(currencyDropdown.value.length-3, currencyDropdown.value.length);
 }
 
 function handleConversion() {
@@ -64,9 +64,8 @@ function handleConversion() {
 const addButton = document.querySelector("#add");
 const currencyOptions = document.querySelector("#currency-options");
 addButton.addEventListener("click", function() {
-    if (!displayedCurrencies.includes(currencyOptions.value)) {
-        displayedCurrencies.push(currencyOptions.value);
+    if (!displayedCurrencies.includes(currencyOptions.value.substring(currencyOptions.value.length-3, currencyOptions.value.length))) {
+        displayedCurrencies.push(currencyOptions.value.substring(currencyOptions.value.length-3, currencyOptions.value.length));
     }
     handleConversion();
-    console.log(displayedCurrencies);
 })
