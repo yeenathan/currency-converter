@@ -8,7 +8,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
-
+ 
 h1 {
     margin-top: 20px;
     font-size: 23px;
@@ -47,12 +47,12 @@ h1 {
   border: none;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
-  appearance: none; /* Remove default browser styling */
-  background-image: url('images/arrow.svg'); /* Add your own arrow */
+  appearance: none; 
+  background-image: url('images/arrow.svg'); 
   background-repeat: no-repeat;
-  background-position: right 20px center; /* Position the arrow */
-  background-size: 20px 20px; /* Make the arrow 10px by 10px */
-  padding-right: 30px; /* Add padding to prevent text from overlapping the arrow */
+  background-position: right 20px center; 
+  background-size: 20px 20px; 
+  padding-right: 30px; 
   margin-bottom: 24px;
 }
 
@@ -68,12 +68,12 @@ h1 {
   border: none;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
-  appearance: none; /* Remove default browser styling */
-  background-image: url('images/arrow.svg'); /* Add your own arrow */
+  appearance: none; 
+  background-image: url('images/arrow.svg'); 
   background-repeat: no-repeat;
-  background-position: right 20px center; /* Position the arrow */
-  background-size: 20px 20px; /* Make the arrow 10px by 10px */
-  padding-right: 30px; /* Add padding to prevent text from overlapping the arrow */
+  background-position: right 20px center; 
+  background-size: 20px 20px;
+  padding-right: 30px; 
   margin-bottom: 24px;
 }
 #date {
@@ -104,12 +104,12 @@ h1 {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 24px;
-  appearance: none; /* Remove default browser styling */
-  background-image: url('images/calendar.svg'); /* Add your own calendar icon */
+  appearance: none; 
+  background-image: url('images/calendar.svg'); 
   background-repeat: no-repeat;
-  background-position: right 20px center; /* Position the icon */
-  background-size: 20px 20px; /* Make the icon 20px by 20px */
-  padding-right: 30px; /* Add padding to prevent text from overlapping the icon */
+  background-position: right 20px center; 
+  background-size: 20px 20px; 
+  padding-right: 30px; 
 }
 
 #titles {
@@ -165,5 +165,23 @@ h1 {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5em;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav a:visited {
   color: white;
 }

@@ -183,15 +183,20 @@ h1 {
     padding: 1em;
 }
 
-form button {
-    border: none;
-    border-radius: 2em;
-    font-family: 'work sans', sans-serif;
-    background-color: #EFEFEF;
+.nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
 }
 
-form button:hover {
-    background-color: #b1b1b1;
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav a:visited {
     color: white;
 }
-
