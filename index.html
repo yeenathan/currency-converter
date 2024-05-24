@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Currency Exchange</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
 </head>
     <body class="home">
         <div class="frame">
+            <div class="top-bar">
+                <img src="./images/iphone-top-bar.svg" alt="top-bar">
+            </div>
             <header>
                 <h1>Currency Converter</h1>
             </header>
@@ -52,7 +58,7 @@
                 <div class="dashboard">
                     <div class="dashboard-header">
                         <h2>Dashboard</h2>
-                        <div>
+                        <div class="addCurrency">
                             <select id="currency-options">
                                 <option>CAD</option>
                                 <option>USD</option>
@@ -87,10 +93,10 @@
                                 <option>USD</option>
                                 <option>ZAR</option>
                             </select>
-                            <button id="add">Add</button>
+                            <button id="add"><img src="/images/add_circle.svg" alt="add circle"></button>
                         </div>
                     </div>
-                    <table>
+                    <table class="currency-table">
 
                     </table>
                 </div>
