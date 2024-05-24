@@ -1,6 +1,6 @@
 document.getElementById("checkButton").addEventListener("click", function() {
     const date = document.getElementById("date").value;
-    const currency1 = document.getElementById("startCurrency").value; // Get the start currency
+    const currency1 = document.getElementById("startCurrency").value;
     const currency2 = document.getElementById("endCurrency").value; 
     const apiUrl = `https://api.frankfurter.app/${date}?from=${currency1}&to=${currency2}`;
     

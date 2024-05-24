@@ -6,9 +6,14 @@
   <title>Currency Historical Value Checker</title>
   <link rel="stylesheet" type="text/css" href="css/stylesHistorical.css">
 </head>
-<body>
+<body class="home">
     <div class="frame">
-        <h1>Currency Historical Value Checker</h1>
+        <div class="top-bar">
+            <img src="./images/iphone-top-bar.svg" alt="top-bar">
+        </div>
+        <header>
+            <h1>Historical Value Checker</h1>
+        </header>
         <div class="cardBackground">
         <label for="startCurrency" id="titlesTop">Compare:</label>
         <select id="startCurrency">
@@ -88,6 +93,9 @@
     </div>
         <div id="result"></div>
     </div>
+    
     <script src="scripts/scriptHistorical.js"></script>
+    <script src="./scripts/swipe.js"></script>
+
 </body>
 </html>
